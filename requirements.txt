@@ -7,3 +7,7 @@ requests
 Pillow
 python-dotenv
 google-genai
+fastapi
+uvicorn
+httpx
+pydantic
