@@ -6,4 +6,4 @@ plotly
 requests
 Pillow
 python-dotenv
-google-generativeai
+google-genai
