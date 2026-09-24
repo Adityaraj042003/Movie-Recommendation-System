@@ -240,6 +240,14 @@ st.markdown(
         font-size: 0.9rem !important;
         color: #ffffff !important;
     }
+    /* Fix AI Assistant message text visibility */
+div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"],
+div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] p,
+div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] li,
+div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] strong,
+div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] span {
+    color: #ffffff !important;
+}
 </style>
 """,
     unsafe_allow_html=True,
