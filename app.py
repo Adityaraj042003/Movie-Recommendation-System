@@ -16,23 +16,22 @@ st.set_page_config(
 )
 
 # =========================================================================
-# EXACT THEME 3: BLUE + TEAL (Fresh & Calm)
-# Palette: Deep Navy (#083D91), Vibrant Teal (#1488A6), Mint Teal (#5EEAD4), Light (#E0F2FE)
+# THEME 3: BLUE + TEAL (Pixel Match with Bottom-Right Inline Assistant)
 # =========================================================================
 st.markdown(
     """
 <style>
-    /* Exact Navy Blue Base from Pic 3 (Clean, vibrant, not pitch-black) */
+    /* Dark Oceanic Slate Base */
     .stApp {
-        background-color: #081e42 !important;
+        background-color: #061024 !important;
         color: #E0F2FE !important;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
     
     .block-container { 
-        padding-top: 1.5rem; 
-        padding-bottom: 5.5rem; 
-        max-width: 1480px; 
+        padding-top: 1.2rem; 
+        padding-bottom: 5rem; 
+        max-width: 1440px; 
     }
 
     header[data-testid="stHeader"] {
@@ -42,212 +41,193 @@ st.markdown(
         visibility: hidden;
     }
 
-    /* Left Sidebar: Navy Foundation */
+    /* Left Sidebar */
     section[data-testid="stSidebar"] {
-        background-color: #0b2654 !important;
-        border-right: 1.5px solid rgba(94, 234, 212, 0.25) !important;
+        background-color: #081630 !important;
+        border-right: 1px solid rgba(20, 136, 166, 0.25) !important;
     }
 
-    /* Sidebar Brand Card: Navy to Teal Gradient */
     .sidebar-brand {
-        background: linear-gradient(135deg, #083D91 0%, #1488A6 100%) !important;
-        border: 1.5px solid #5EEAD4 !important;
-        border-radius: 12px;
+        background: linear-gradient(135deg, #083D91 0%, #0d285c 100%) !important;
+        border: 1px solid rgba(94, 234, 212, 0.4) !important;
+        border-radius: 10px;
         padding: 14px 16px;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 4px 18px rgba(20, 136, 166, 0.4);
+        margin-bottom: 1.2rem;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     }
     .sidebar-brand-title {
         color: #ffffff;
         font-weight: 800;
-        font-size: 1.25rem;
-        letter-spacing: -0.3px;
+        font-size: 1.2rem;
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
-    /* White Sidebar Headings */
     .sidebar-section-title {
         color: #ffffff !important;
-        font-size: 0.78rem;
+        font-size: 0.76rem;
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        margin-top: 1.4rem;
-        margin-bottom: 0.6rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.5rem;
     }
 
-    /* Navigation & Action Buttons: Solid Vibrant Teal */
+    /* Action Buttons */
     .stButton > button {
         background-color: #1488A6 !important;
         color: #ffffff !important;
-        border: 1px solid #5EEAD4 !important;
-        border-radius: 8px !important;
+        border: none !important;
+        border-radius: 6px !important;
         font-weight: 700 !important;
-        font-size: 0.86rem !important;
+        font-size: 0.85rem !important;
         padding: 0.4rem 0.7rem !important;
         width: 100% !important;
+        box-shadow: 0 3px 10px rgba(20, 136, 166, 0.3) !important;
         transition: all 0.2s ease !important;
     }
     .stButton > button:hover {
         background-color: #5EEAD4 !important;
-        color: #081e42 !important;
-        border-color: #5EEAD4 !important;
-        box-shadow: 0 0 16px rgba(94, 234, 212, 0.6) !important;
+        color: #061024 !important;
+        box-shadow: 0 0 14px rgba(94, 234, 212, 0.5) !important;
     }
 
-    /* Slider styling: Teal bar and mint handle */
-    div[data-testid="stSlider"] div[data-baseweb="slider"] div {
-        background-color: transparent !important;
+    /* Slider: Teal styling */
+    div[data-testid="stSlider"] div[data-baseweb="slider"] {
+        margin-top: 5px;
     }
     div[data-testid="stSlider"] [role="slider"] {
         background-color: #5EEAD4 !important;
         border: 2px solid #ffffff !important;
-        box-shadow: 0 0 10px rgba(94, 234, 212, 0.8) !important;
+        box-shadow: 0 0 8px rgba(94, 234, 212, 0.8) !important;
     }
-    div[data-testid="stSlider"] div[data-testid="stTickBar"] ~ div {
-        background: linear-gradient(90deg, #1488A6 0%, #5EEAD4 100%) !important;
+    div[data-testid="stSlider"] [data-testid="stTickBar"] ~ div div {
+        background: #1488A6 !important;
     }
 
-    /* Movie Cards: Soft Navy Blue Box Framing from Pic 3 */
-    div[data-testid="stVerticalBlock"] > div:has(> div[data-testid="stImage"]) {
-        background: #0f2d5e !important;
-        border: 1.5px solid rgba(20, 136, 166, 0.5) !important;
+    /* Hero Panel from Photo */
+    .hero-panel {
+        background: #083D91 !important;
         border-radius: 12px;
-        padding: 10px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        padding: 2rem 2.2rem;
+        margin-bottom: 1.4rem;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+    .hero-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin: 0 0 0.3rem 0;
+        letter-spacing: -0.4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .hero-subtitle {
+        color: #CBD5E1;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    /* Uniform Movie Cards */
+    div[data-testid="stVerticalBlock"] > div:has(> div[data-testid="stImage"]) {
+        background: #0d1e3d !important;
+        border: 1px solid rgba(20, 136, 166, 0.3) !important;
+        border-radius: 10px;
+        padding: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+        transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     div[data-testid="stVerticalBlock"] > div:has(> div[data-testid="stImage"]):hover {
-        transform: translateY(-5px);
+        transform: translateY(-4px);
         border-color: #5EEAD4 !important;
-        box-shadow: 0 8px 24px rgba(94, 234, 212, 0.4) !important;
     }
 
-    /* Uniform Poster Dimensions */
     div[data-testid="stImage"] img {
-        border-radius: 8px;
-        height: 255px !important;
+        border-radius: 6px;
+        height: 240px !important;
         width: 100% !important;
         object-fit: cover !important;
     }
 
-    /* Card Titles */
     .movie-card-title {
         color: #ffffff;
-        font-size: 0.86rem;
-        font-weight: 700;
-        line-height: 1.25rem;
-        height: 2.5rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        line-height: 1.2rem;
+        height: 2.4rem;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin: 6px 0 8px 0;
         text-align: center;
     }
 
-    /* Detail Page Glass Box */
-    .glass-card {
-        background: rgba(15, 45, 94, 0.9);
-        border: 1px solid rgba(20, 136, 166, 0.45);
-        border-radius: 14px;
-        padding: 22px;
-        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(8px);
-    }
-
-    /* Tag Pills */
-    .pill-badge {
-        display: inline-block;
-        border-radius: 9999px;
-        padding: 3px 12px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        margin-right: 8px;
-        margin-bottom: 6px;
-    }
-
-    /* Search Input Field */
-    div[data-baseweb="input"] {
-        background-color: #0f2d5e !important;
-        border: 1.5px solid rgba(20, 136, 166, 0.6) !important;
-        border-radius: 10px !important;
-    }
-    div[data-baseweb="input"]:focus-within {
-        border-color: #5EEAD4 !important;
-        box-shadow: 0 0 12px rgba(94, 234, 212, 0.5) !important;
-    }
-    div[data-baseweb="input"] input {
-        color: #ffffff !important;
-    }
-
-    /* ================================================= */
-    /* FLOATING PILL BUTTON FOR AI ASSISTANT             */
-    /* ================================================= */
+    /* ========================================================================= */
+    /* EXACT POPOVER STYLING (Pinned to Bottom-Right without stretching)        */
+    /* ========================================================================= */
     div[data-testid="stPopover"] {
         position: fixed !important;
-        bottom: 24px !important;
-        right: 28px !important;
+        bottom: 18px !important;
+        right: 24px !important;
         width: auto !important;
-        max-width: fit-content !important;
         z-index: 999999 !important;
     }
 
     div[data-testid="stPopover"] > button {
-        background: linear-gradient(135deg, #1488A6 0%, #083D91 100%) !important;
+        background: rgba(13, 30, 61, 0.95) !important;
         color: #ffffff !important;
-        border: 2px solid #5EEAD4 !important;
-        border-radius: 50px !important;
-        padding: 10px 22px !important;
-        font-size: 0.92rem !important;
-        font-weight: 800 !important;
-        letter-spacing: 0.3px !important;
-        box-shadow: 0 8px 24px rgba(20, 136, 166, 0.6) !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        gap: 8px !important;
+        border: 1.5px solid #1488A6 !important;
+        border-radius: 8px !important;
+        padding: 6px 14px !important;
+        font-size: 0.84rem !important;
+        font-weight: 700 !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
         width: auto !important;
-        transition: all 0.25s ease !important;
     }
 
     div[data-testid="stPopover"] > button:hover {
-        transform: translateY(-4px) scale(1.04) !important;
-        box-shadow: 0 12px 28px rgba(94, 234, 212, 0.7) !important;
+        border-color: #5EEAD4 !important;
+        background: #083D91 !important;
     }
 
+    /* Floating Card Modal matching the Photo */
     div[data-testid="stPopoverBody"] {
-        background: linear-gradient(160deg, #0b2654 0%, #081e42 100%) !important;
-        border: 2px solid #1488A6 !important;
-        border-radius: 20px !important;
-        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85) !important;
-        width: 390px !important;
+        background: #0d285c !important;
+        border: 1.5px solid #1488A6 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8) !important;
+        width: 380px !important;
         max-width: 90vw !important;
-        max-height: 540px !important;
-        padding: 18px !important;
+        padding: 16px !important;
     }
 
+    /* Forced White Text on both laptops */
     div[data-testid="stChatMessage"] {
-        background-color: #0f2d5e !important;
-        border: 1px solid rgba(94, 234, 212, 0.25) !important;
-        border-radius: 12px !important;
-        padding: 10px 14px !important;
+        background-color: #081c3d !important;
+        border: 1px solid rgba(94, 234, 212, 0.3) !important;
+        border-radius: 10px !important;
+        padding: 10px 12px !important;
         margin-bottom: 8px !important;
-        font-size: 0.9rem !important;
-        color: #ffffff !important;
     }
-    /* Fix AI Assistant message text visibility */
-div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"],
-div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] p,
-div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] li,
-div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] strong,
-div[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] span {
-    color: #ffffff !important;
-}
+
+    div[data-testid="stChatMessage"] * {
+        color: #ffffff !important;
+        line-height: 1.4 !important;
+    }
+
+    div[data-testid="stChatMessage"] code {
+        background-color: rgba(20, 136, 166, 0.4) !important;
+        color: #5EEAD4 !important;
+        border: 1px solid rgba(94, 234, 212, 0.4) !important;
+        padding: 2px 6px !important;
+        border-radius: 4px !important;
+    }
 </style>
 """,
     unsafe_allow_html=True,
@@ -262,17 +242,6 @@ if "selected_tmdb_id" not in st.session_state:
     st.session_state.selected_tmdb_id = None
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
-
-qp_view = st.query_params.get("view")
-qp_id = st.query_params.get("id")
-if qp_view in ("home", "details"):
-    st.session_state.view = qp_view
-if qp_id:
-    try:
-        st.session_state.selected_tmdb_id = int(qp_id)
-        st.session_state.view = "details"
-    except Exception:
-        pass
 
 
 def goto_home():
@@ -292,7 +261,7 @@ def goto_details(tmdb_id: int):
 
 
 # =============================
-# API HELPERS (60s timeout)
+# API HELPERS
 # =============================
 @st.cache_data(ttl=30, show_spinner=False)
 def api_get_json(path: str, params: dict | None = None):
@@ -330,7 +299,7 @@ def poster_grid(cards, cols=6, key_prefix="grid"):
                         st.image(poster, use_container_width=True)
                     else:
                         st.image(
-                            "https://via.placeholder.com/300x450/0f2d5e/1488A6?text=No+Poster",
+                            "https://via.placeholder.com/300x450/0d1e3d/1488A6?text=No+Poster",
                             use_container_width=True,
                         )
 
@@ -361,42 +330,19 @@ def to_cards_from_tfidf_items(tfidf_items):
 
 def parse_tmdb_search_to_cards(data, keyword: str, limit: int = 24):
     keyword_l = keyword.strip().lower()
-
+    raw_items = []
     if isinstance(data, dict) and "results" in data:
-        raw = data.get("results") or []
-        raw_items = []
-        for m in raw:
+        for m in data.get("results") or []:
             title = (m.get("title") or "").strip()
             tmdb_id = m.get("id")
             poster_path = m.get("poster_path")
-            if not title or not tmdb_id:
-                continue
-            raw_items.append(
-                {
+            if title and tmdb_id:
+                raw_items.append({
                     "tmdb_id": int(tmdb_id),
                     "title": title,
                     "poster_url": f"{TMDB_IMG}{poster_path}" if poster_path else None,
-                    "release_date": m.get("release_date", ""),
-                }
-            )
-    elif isinstance(data, list):
-        raw_items = []
-        for m in data:
-            tmdb_id = m.get("tmdb_id") or m.get("id")
-            title = (m.get("title") or "").strip()
-            poster_url = m.get("poster_url")
-            if not title or not tmdb_id:
-                continue
-            raw_items.append(
-                {
-                    "tmdb_id": int(tmdb_id),
-                    "title": title,
-                    "poster_url": poster_url,
-                    "release_date": m.get("release_date", ""),
-                }
-            )
-    else:
-        return [], []
+                    "release_date": m.get("release_date", "")
+                })
 
     matched = [x for x in raw_items if keyword_l in x["title"].lower()]
     final_list = matched if matched else raw_items
@@ -407,10 +353,7 @@ def parse_tmdb_search_to_cards(data, keyword: str, limit: int = 24):
         label = f"{x['title']} ({year})" if year else x["title"]
         suggestions.append((label, x["tmdb_id"]))
 
-    cards = [
-        {"tmdb_id": x["tmdb_id"], "title": x["title"], "poster_url": x["poster_url"]}
-        for x in final_list[:limit]
-    ]
+    cards = [{"tmdb_id": x["tmdb_id"], "title": x["title"], "poster_url": x["poster_url"]} for x in final_list[:limit]]
     return suggestions, cards
 
 
@@ -446,65 +389,40 @@ with st.sidebar:
     st.write("")
     st.markdown('<div class="sidebar-section-title">Display Density</div>', unsafe_allow_html=True)
     grid_cols = st.slider("Columns per row", 4, 8, 6, label_visibility="collapsed")
-    st.caption(f"Currently showing: **{grid_cols} columns**")
 
 
 # ==========================================================
 # VIEW: HOME
 # ==========================================================
 if st.session_state.view == "home":
-    # EXACT SHADING FROM PIC 3: Deep Royal Blue (#083D91) smoothly blending to Vibrant Teal (#1488A6) with Mint (#5EEAD4) Border
     st.markdown("""
-        <div style="
-            background: linear-gradient(110deg, #083D91 0%, #0d5c8a 55%, #1488A6 100%);
-            border-radius: 14px;
-            padding: 2.2rem 2.2rem;
-            margin-bottom: 1.8rem;
-            border: 1.5px solid #5EEAD4;
-            box-shadow: 0 8px 25px rgba(20, 136, 166, 0.35);
-        ">
-            <h1 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin: 0 0 0.4rem 0; letter-spacing: -0.5px;">🎬 CineMatch</h1>
-            <p style="color: #E0F2FE; font-size: 1rem; max-width: 640px; margin: 0; opacity: 0.95;">
-                Explore movies that match the plots you love.
-            </p>
+        <div class="hero-panel">
+            <div class="hero-title">🎬 CineMatch</div>
+            <p class="hero-subtitle">Explore movies that match the plots you love.</p>
         </div>
     """, unsafe_allow_html=True)
 
     typed = st.text_input(
         "Search by movie title:",
-        placeholder="Search by movie title, genre, actor...",
+        placeholder="Type a movie name: Interstellar, Inception, Avengers, Batman...",
     )
 
-    # SEARCH MODE
     if typed.strip():
-        if len(typed.strip()) < 2:
-            st.caption("Type at least 2 characters for search suggestions.")
-        else:
-            with st.spinner("🔎 Querying database..."):
+        if len(typed.strip()) >= 2:
+            with st.spinner("Searching..."):
                 data, err = api_get_json("/tmdb/search", params={"query": typed.strip()})
-                if err or data is None:
-                    st.error(f"Search failed: {err}")
-                else:
-                    suggestions, cards = parse_tmdb_search_to_cards(
-                        data, typed.strip(), limit=24
-                    )
-
+                if not err and data:
+                    suggestions, cards = parse_tmdb_search_to_cards(data, typed.strip(), limit=24)
                     if suggestions:
-                        labels = ["-- Select from suggestions --"] + [s[0] for s in suggestions]
+                        labels = ["-- Select direct match --"] + [s[0] for s in suggestions]
                         selected = st.selectbox("Direct Matches", labels, index=0)
-
-                        if selected != "-- Select from suggestions --":
+                        if selected != "-- Select direct match --":
                             label_to_id = {s[0]: s[1] for s in suggestions}
                             goto_details(label_to_id[selected])
-                    else:
-                        st.info("No suggestions found.")
-
                     st.markdown("### Search Results")
-                    poster_grid(cards, cols=grid_cols, key_prefix="search_results")
-
+                    poster_grid(cards, cols=grid_cols, key_prefix="search")
         st.stop()
 
-    # HOME FEED MODE
     cat_title = {
         "trending": "Trending Now",
         "popular": "Most Popular",
@@ -513,17 +431,14 @@ if st.session_state.view == "home":
         "upcoming": "Coming Soon"
     }.get(home_category, home_category.title())
 
-    # Teal droplet matching Pic 3
-    st.markdown(f"### <span style='color: #5EEAD4; font-size: 1.2rem; vertical-align: middle;'>💧</span> {cat_title}", unsafe_allow_html=True)
+    st.markdown(f"### <span style='color: #1488A6;'>💧</span> {cat_title}", unsafe_allow_html=True)
 
-    home_cards, err = api_get_json(
-        "/home", params={"category": home_category, "limit": 24}
-    )
+    home_cards, err = api_get_json("/home", params={"category": home_category, "limit": 24})
     if err or not home_cards:
-        st.error(f"Home feed failed: {err or 'Unknown error'}")
+        st.error("Backend waking up. Please refresh in a few seconds.")
         st.stop()
 
-    poster_grid(home_cards, cols=grid_cols, key_prefix="home_feed")
+    poster_grid(home_cards, cols=grid_cols, key_prefix="feed")
 
 # ==========================================================
 # VIEW: DETAILS
@@ -531,129 +446,65 @@ if st.session_state.view == "home":
 elif st.session_state.view == "details":
     tmdb_id = st.session_state.selected_tmdb_id
     if not tmdb_id:
-        st.warning("No movie selected.")
-        if st.button("← Back to Feed"):
-            goto_home()
-        st.stop()
+        goto_home()
 
-    col_nav_left, col_nav_right = st.columns([4, 1])
-    with col_nav_left:
-        st.markdown("### Movie Details & Intelligence")
-    with col_nav_right:
-        if st.button("← Back to Feed", use_container_width=True):
-            goto_home()
+    if st.button("← Back to Feed", use_container_width=False):
+        goto_home()
 
     data, err = api_get_json(f"/movie/id/{tmdb_id}")
-    if err or not data:
-        st.error(f"Could not load details: {err or 'Unknown error'}")
-        st.stop()
+    if not err and data:
+        left, right = st.columns([1, 2.5], gap="large")
+        with left:
+            st.image(data.get("poster_url") or "", use_container_width=True)
+        with right:
+            st.markdown(f"## {data.get('title','')}")
+            st.write(data.get("overview") or "No synopsis available.")
 
-    if data.get("backdrop_url"):
-        st.markdown(f"""
-        <div style="
-            background-image: linear-gradient(to bottom, rgba(8, 30, 66, 0.2), #081e42), url('{data["backdrop_url"]}');
-            background-size: cover;
-            background-position: center;
-            height: 250px;
-            border-radius: 14px;
-            margin-bottom: 1.5rem;
-            border: 1.5px solid rgba(20, 136, 166, 0.35);
-        "></div>
-        """, unsafe_allow_html=True)
+        st.markdown("---")
+        st.subheader("🎯 Recommendations")
 
-    left, right = st.columns([1, 2.2], gap="large")
+        title = (data.get("title") or "").strip()
+        if title:
+            bundle, err2 = api_get_json(
+                "/movie/search",
+                params={"query": title, "tfidf_top_n": 12, "genre_limit": 12},
+            )
 
-    with left:
-        poster_src = data.get("poster_url") or "https://via.placeholder.com/500x750/0f2d5e/1488A6?text=No+Poster"
-        st.image(poster_src, use_container_width=True)
+            tab_tfidf, tab_genre = st.tabs(["🧠 Content Matches (TF-IDF Similarity)", "🎭 Genre Suggestions"])
 
-    with right:
-        st.markdown(f"## {data.get('title','')}")
-        
-        release = data.get("release_date") or "N/A"
-        vote_avg = data.get("vote_average")
-        rating_str = f"⭐ {vote_avg:.1f}/10" if vote_avg else "⭐ Unrated"
-        
-        st.markdown(
-            f"""
-            <div style="margin-bottom: 1rem;">
-                <span class="pill-badge" style="background: rgba(224, 242, 254, 0.15); color: #E0F2FE; border: 1px solid rgba(224, 242, 254, 0.3);">{release[:4] if release != 'N/A' else 'N/A'}</span>
-                <span class="pill-badge" style="background: rgba(234, 179, 8, 0.25); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.5);">{rating_str}</span>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-        genres = [g["name"] for g in data.get("genres", [])]
-        if genres:
-            genre_html = "".join([f'<span class="pill-badge" style="background: rgba(20, 136, 166, 0.35); color: #5EEAD4; border: 1px solid rgba(94, 234, 212, 0.4);">{g}</span>' for g in genres])
-            st.markdown(f"<div style='margin-bottom: 1.2rem;'>{genre_html}</div>", unsafe_allow_html=True)
-
-        st.markdown(
-            f"""
-            <div class="glass-card">
-                <h4 style="margin-top: 0; color: #5EEAD4;">Synopsis</h4>
-                <p style="color: #E0F2FE; line-height: 1.6; margin-bottom: 0;">{data.get("overview") or "No overview provided."}</p>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-    st.markdown("---")
-    st.subheader("🎯 Recommendations")
-
-    title = (data.get("title") or "").strip()
-    if title:
-        bundle, err2 = api_get_json(
-            "/movie/search",
-            params={"query": title, "tfidf_top_n": 12, "genre_limit": 12},
-        )
-
-        tab_tfidf, tab_genre = st.tabs(["🧠 Content Matches (TF-IDF Similarity)", "🎭 Genre Suggestions"])
-
-        with tab_tfidf:
-            if not err2 and bundle and bundle.get("tfidf_recommendations"):
-                poster_grid(
-                    to_cards_from_tfidf_items(bundle.get("tfidf_recommendations")),
-                    cols=grid_cols,
-                    key_prefix="details_tfidf",
-                )
-            else:
-                st.info("No direct TF-IDF matches available for this title.")
-
-        with tab_genre:
-            genre_items = bundle.get("genre_recommendations", []) if (not err2 and bundle) else []
-            if genre_items:
-                poster_grid(
-                    genre_items,
-                    cols=grid_cols,
-                    key_prefix="details_genre",
-                )
-            else:
-                genre_only, err3 = api_get_json(
-                    "/recommend/genre", params={"tmdb_id": tmdb_id, "limit": 18}
-                )
-                if not err3 and genre_only:
+            with tab_tfidf:
+                if not err2 and bundle and bundle.get("tfidf_recommendations"):
                     poster_grid(
-                        genre_only, cols=grid_cols, key_prefix="details_genre_fallback"
+                        to_cards_from_tfidf_items(bundle.get("tfidf_recommendations")),
+                        cols=grid_cols,
+                        key_prefix="details_tfidf",
+                    )
+                else:
+                    st.info("No direct TF-IDF matches available for this title.")
+
+            with tab_genre:
+                genre_items = bundle.get("genre_recommendations", []) if (not err2 and bundle) else []
+                if genre_items:
+                    poster_grid(
+                        genre_items,
+                        cols=grid_cols,
+                        key_prefix="details_genre",
                     )
                 else:
                     st.info("No genre suggestions available right now.")
-    else:
-        st.warning("No title available to compute recommendations.")
 
 # =========================================================
-# TEAL FLOATING POP-UP AI ASSISTANT
+# FLOATING POPOVER (EXACT POSITION FROM PHOTO)
 # =========================================================
 with st.popover("💬 Ask AI Assistant"):
     st.markdown(
         """
-        <div style="margin-bottom: 10px;">
-            <span style="background: #1488A6; color: #ffffff; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 800; border: 1px solid rgba(94, 234, 212, 0.4);">POWERED BY AI</span>
-            <h3 style="margin: 6px 0 2px 0; color: #E0F2FE; font-size: 1.25rem;">💬 AI Movie Assistant</h3>
-            <span style="color: #5EEAD4; font-size: 0.8rem;">Ask plot breakdowns, similar vibes, or cast trivia</span>
+        <div style="margin-bottom: 8px;">
+            <span style="background: #1488A6; color: #ffffff; padding: 2px 7px; border-radius: 4px; font-size: 0.7rem; font-weight: 800;">POWERED BY AI</span>
+            <h4 style="margin: 6px 0 2px 0; color: #ffffff; font-size: 1.15rem;">💬 AI Movie Assistant</h4>
+            <span style="color: #94A3B8; font-size: 0.8rem;">Ask plot breakdowns, similar vibes, or cast trivia</span>
         </div>
-        <hr style="border-color: rgba(20, 136, 166, 0.4); margin: 6px 0 12px 0;">
+        <hr style="border-color: rgba(20, 136, 166, 0.4); margin: 6px 0 10px 0;">
         """,
         unsafe_allow_html=True,
     )
@@ -662,16 +513,16 @@ with st.popover("💬 Ask AI Assistant"):
         with st.chat_message(role):
             st.write(text)
 
-    chat_question = st.chat_input("Ask CineMatch AI...")
-
-    if chat_question:
-        st.session_state.chat_history.append(("user", chat_question))
+    q = st.chat_input("Ask CineMatch AI...")
+    if q:
+        st.session_state.chat_history.append(("user", q))
         with st.chat_message("user"):
-            st.write(chat_question)
+            st.write(q)
 
         with st.chat_message("assistant"):
-            with st.spinner("💬 Thinking..."):
-                answer = get_ai_movie_response(chat_question)
-            st.write(answer)
-        st.session_state.chat_history.append(("assistant", answer))
+            with st.spinner("Thinking..."):
+                ans = get_ai_movie_response(q)
+            st.write(ans)
+
+        st.session_state.chat_history.append(("assistant", ans))
         st.rerun()
